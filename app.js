@@ -1,7 +1,7 @@
 const argv = require('./config/yargs').argv;
 const color = require('colors');
 
-const { crearArchivo, listarTabla } = require('./multiplicar/multiplicar');
+const { crearArchivo, listarTabla } = require('./operaciones/operaciones');
 
 
 let comando = argv._[0];
@@ -13,7 +13,7 @@ switch (comando) {
         break;
 
     case 'crear':
-        crearArchivo(argv.base, argv.limite).then((archivo) => {
+        crearArchivo(argv.opcion, argv.base, argv.limite).then((archivo) => {
             console.log(archivo);
 
         }).catch((err) => {
@@ -25,8 +25,6 @@ switch (comando) {
     default:
         console.log('Comando no reconocido');
 
-
-
 }
 
 // let numRandom = Math.random() * (12 - 1) + 1;
@@ -36,6 +34,6 @@ switch (comando) {
 // let parametro = argv[2];
 // let base = parametro.split('=')[1];
 
-console.log(argv);
+// console.log(argv);
 
 // console.log(process.argv);
