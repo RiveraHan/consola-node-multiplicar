@@ -11,6 +11,8 @@ npm install
 
 ## Uso
 
+Nota: Debe crear un una carpeta con el nombre tablas en esta se guradarán los archivos que vaya creando. 
+
 ### Sumar
 ``` 
 node app crear -o sumar -b 5 -l 10
